@@ -1,0 +1,15 @@
+# Cloudflare Workers (Static Assets) configuration.
+# Pure-static site under https://starflux.fikua.com/. No Worker code,
+# no backend proxy. Cloudflare serves the files in `directory` directly
+# from its global edge cache. Same pattern as fikua-lab-landing.
+
+name = "fikua-starflux-web"
+compatibility_date = "2026-09-13"
+
+routes = [
+    { pattern = "starflux.fikua.com", custom_domain = true }
+]
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"

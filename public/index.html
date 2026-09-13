@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starflux — Light curve photometry, on your desktop</title>
+    <meta name="description" content="Starflux is an open-source native desktop app for differential aperture photometry on FITS image series — exoplanet transits, variable stars, asteroid occultations. Free for macOS, Windows, and Linux.">
+    <meta name="theme-color" content="#0b0e1a">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="canonical" href="https://starflux.fikua.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Starflux — Light curve photometry, on your desktop">
+    <meta property="og:description" content="Open-source native desktop app for differential aperture photometry on FITS image series. Free for macOS, Windows, and Linux.">
+    <meta property="og:url" content="https://starflux.fikua.com/">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="starfield" aria-hidden="true"></div>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">
+                <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="Starflux">
+                    <circle cx="32" cy="32" r="30" fill="#141a33"/>
+                    <path d="M10 40 L20 34 L28 38 L38 22 L46 26 L54 14" stroke="#f6c915" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <circle cx="38" cy="22" r="3.5" fill="#f6c915"/>
+                </svg>
+                Starflux
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="hide-mobile">Features</a>
+                <a href="#roadmap" class="hide-mobile">Roadmap</a>
+                <a href="https://github.com/fikua/fikua-starflux" target="_blank" rel="noopener">GitHub</a>
+                <a href="#download" class="btn-download-nav">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <span class="hero-eyebrow">Open source · Go · Alpha targeted December 2026</span>
+            <h1>Light curve photometry,<br>on <span class="highlight">your</span> desktop</h1>
+            <p class="hero-sub">
+                Starflux is a native desktop app for differential aperture photometry on FITS image series —
+                exoplanet transits, variable stars, asteroid occultations, and other light-curve science.
+                Spiritual successor to FotoDif.
+            </p>
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary">Download Starflux</a>
+                <a href="https://github.com/fikua/fikua-starflux" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
+            </div>
+
+            <div class="hero-chart">
+                <svg viewBox="0 0 640 220" fill="none" role="img" aria-label="Example differential light curve">
+                    <line x1="40" y1="20" x2="40" y2="190" stroke="#232b4d" stroke-width="1"/>
+                    <line x1="40" y1="190" x2="620" y2="190" stroke="#232b4d" stroke-width="1"/>
+                    <path d="M50 60 C 120 62, 160 64, 190 68 C 220 90, 250 150, 280 160 C 310 150, 340 90, 370 68 C 400 64, 470 62, 610 60"
+                          stroke="#f6c915" stroke-width="2" fill="none"/>
+                    <g fill="#7dd3fc">
+                        <circle cx="55" cy="59" r="2"/><circle cx="90" cy="61" r="2"/><circle cx="130" cy="63" r="2"/>
+                        <circle cx="170" cy="66" r="2"/><circle cx="200" cy="80" r="2"/><circle cx="230" cy="115" r="2"/>
+                        <circle cx="260" cy="150" r="2"/><circle cx="280" cy="160" r="2"/><circle cx="300" cy="150" r="2"/>
+                        <circle cx="330" cy="115" r="2"/><circle cx="360" cy="80" r="2"/><circle cx="390" cy="66" r="2"/>
+                        <circle cx="430" cy="63" r="2"/><circle cx="470" cy="61" r="2"/><circle cx="510" cy="60" r="2"/>
+                        <circle cx="560" cy="60" r="2"/><circle cx="600" cy="60" r="2"/>
+                    </g>
+                    <text x="330" y="210" fill="#8b93b8" font-size="11" text-anchor="middle" font-family="monospace">time (JD)</text>
+                    <text x="20" y="105" fill="#8b93b8" font-size="11" text-anchor="middle" font-family="monospace" transform="rotate(-90 20 105)">Δmag</text>
+                </svg>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Built for the observing session</h2>
+            <p class="section-sub">A complete workflow from raw FITS frames to a publishable light curve.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
+                    </div>
+                    <h3>FITS image series</h3>
+                    <p>Load a single file, multiple files, or an entire folder of an observing run.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/></svg>
+                    </div>
+                    <h3>Aperture photometry</h3>
+                    <p>Sub-pixel centroiding, aperture sum, and sigma-clipped sky annulus background subtraction.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <h3>Differential light curves</h3>
+                    <p>Target, comparison, and check stars — named and unlimited, not fixed to three.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Resumable sessions</h3>
+                    <p>Save and restore star positions and processed results — pick up an interrupted run exactly where it left off.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+                    </div>
+                    <h3>Observer mode</h3>
+                    <p>A red-light theme that preserves night vision at the telescope, toggled live with no restart.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3>AAVSO export</h3>
+                    <p>Export results in the AAVSO Extended File Format, ready to submit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="section download">
+            <span class="status-badge status-badge--centered">Pre-alpha — no release published yet</span>
+            <h2>Download Starflux</h2>
+            <p class="section-sub">
+                Grab the <a href="https://github.com/fikua/fikua-starflux/releases/latest" target="_blank" rel="noopener">latest release</a>
+                once the alpha ships. Binaries are not code-signed yet: macOS Gatekeeper and Windows SmartScreen will warn on first launch.
+            </p>
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-card-header">
+                        <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.63 0 2.937.06 4.47 2.19-.114.07-2.664 1.56-2.664 4.72 0 3.75 3.312 5.05 3.348 5.05z"/></svg>
+                        <strong>macOS</strong>
+                    </div>
+                    <div class="platform-files">
+                        <a class="platform-file" href="https://github.com/fikua/fikua-starflux/releases/latest" target="_blank" rel="noopener">
+                            starflux-darwin-arm64.dmg <span class="arch">Apple Silicon</span>
+                        </a>
+                        <a class="platform-file" href="https://github.com/fikua/fikua-starflux/releases/latest" target="_blank" rel="noopener">
+                            starflux-darwin-amd64.dmg <span class="arch">Intel</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-card-header">
+                        <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449 9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                        <strong>Windows</strong>
+                    </div>
+                    <div class="platform-files">
+                        <a class="platform-file" href="https://github.com/fikua/fikua-starflux/releases/latest" target="_blank" rel="noopener">
+                            starflux-windows-amd64-setup.exe <span class="arch">x86_64</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-card-header">
+                        <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.6.056.4.125.799.125 1.101 0 .199-.027.393-.055.593-.06.4-.09.599-.09.898 0 .126.02.26.056.399.09.334.336.6.65.798.313.199.657.334 1.006.4.35.06.7.06 1.05 0 .35-.06.7-.2 1.006-.4.05-.033.09-.066.13-.1.05.033.1.066.146.1.313.2.656.334 1.006.4.35.06.7.06 1.05 0 .35-.066.7-.2 1.006-.4.09-.06.17-.13.24-.2.07.07.15.14.24.2.313.2.657.334 1.006.4.35.06.7.06 1.05 0"/></svg>
+                        <strong>Linux</strong>
+                    </div>
+                    <div class="platform-files">
+                        <a class="platform-file" href="https://github.com/fikua/fikua-starflux/releases/latest" target="_blank" rel="noopener">
+                            starflux-linux-amd64.tar.gz <span class="arch">x86_64</span>
+                        </a>
+                        <a class="platform-file" href="https://github.com/fikua/fikua-starflux/releases/latest" target="_blank" rel="noopener">
+                            starflux-linux-arm64.tar.gz <span class="arch">ARM64</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="download-note">
+                macOS: right-click the app inside the mounted .dmg and choose "Open" instead of double-clicking
+                (or run <code>xattr -cr Starflux.app</code> from Terminal). Windows: click "More info" → "Run anyway" on the SmartScreen prompt.
+            </p>
+            <p class="download-all">
+                <a href="https://github.com/fikua/fikua-starflux/releases" target="_blank" rel="noopener" class="btn btn-secondary">All beta releases →</a>
+            </p>
+        </section>
+
+        <section id="roadmap" class="section">
+            <h2>Roadmap</h2>
+            <p class="section-sub">Alpha targeted for December 2026, Beta in 2027. No v1.0.0 date is set yet.</p>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <span class="roadmap-status done">✓ done</span>
+                    <p>Core measurement pipeline: load FITS → mark stars → aperture photometry → differential light curve → save/export.</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-status done">✓ done</span>
+                    <p>Named/multiple stars, resumable sessions, error tolerance control, header metadata in the star picker.</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-status done">✓ done</span>
+                    <p>Configuration UI, star-tracking drift plot, tilt correction, AAVSO export, automatic star detection.</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-status done">✓ done</span>
+                    <p>Watch-folder processing, field-wide variable search, Lomb-Scargle period analysis.</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-status progress">→ next</span>
+                    <p>Cross-validation of photometry results against FotoDif, then the first tagged alpha release.</p>
+                </div>
+            </div>
+            <p class="download-note">
+                See the <a href="https://github.com/fikua/fikua-starflux/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a>
+                for what shipped in each version, and the
+                <a href="https://github.com/fikua/fikua-starflux#status" target="_blank" rel="noopener">full feature table</a> in the README.
+            </p>
+        </section>
+    </main>
+
+    <div class="fikua-strip">
+        <div class="fikua-strip-inner">
+            <svg viewBox="0 0 500 500" fill="none" aria-hidden="true">
+                <line x1="250.00" y1="220.00" x2="250.00" y2="35.00" stroke="#E1241A" stroke-width="52" stroke-linecap="round"/>
+                <line x1="275.98" y1="235.00" x2="436.20" y2="142.50" stroke="#F6C915" stroke-width="52" stroke-linecap="round"/>
+                <line x1="275.98" y1="265.00" x2="436.20" y2="357.50" stroke="#1A1A1A" stroke-width="52" stroke-linecap="round"/>
+                <line x1="250.00" y1="280.00" x2="250.00" y2="465.00" stroke="#1A4C9C" stroke-width="52" stroke-linecap="round"/>
+                <line x1="224.02" y1="265.00" x2="63.80" y2="357.50" stroke="#F6C915" stroke-width="52" stroke-linecap="round"/>
+                <line x1="224.02" y1="235.00" x2="63.80" y2="142.50" stroke="#1A1A1A" stroke-width="52" stroke-linecap="round"/>
+            </svg>
+            <p>Starflux is an open-source project coordinated by <a href="https://fikua.com" target="_blank" rel="noopener">Fikua</a>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Apache 2.0 licensed</span>
+            <div class="footer-links">
+                <a href="https://github.com/fikua/fikua-starflux" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/fikua/fikua-starflux/issues" target="_blank" rel="noopener">Issues</a>
+                <a href="https://github.com/fikua/fikua-starflux/discussions" target="_blank" rel="noopener">Discussions</a>
+                <a href="https://fikua.com" target="_blank" rel="noopener">fikua.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
