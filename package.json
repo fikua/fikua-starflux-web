@@ -1,0 +1,13 @@
+{
+  "name": "fikua-starflux-web",
+  "private": true,
+  "description": "Landing page for Starflux — starflux.fikua.com",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --watch",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

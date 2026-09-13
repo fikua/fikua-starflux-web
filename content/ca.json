@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Starflux — Fotometria de corbes de llum, al teu escriptori",
+    "description": "Starflux és una aplicació d'escriptori nativa i de codi obert per a fotometria d'obertura diferencial sobre sèries d'imatges FITS — trànsits d'exoplanetes, estrelles variables, ocultacions d'asteroides. Gratuïta per a macOS, Windows i Linux."
+  },
+  "nav": {
+    "features": "Instrumentació",
+    "roadmap": "Full de ruta",
+    "download": "Descarrega"
+  },
+  "hero": {
+    "eyebrow": "Codi obert · Go · Alpha prevista per al desembre de 2026",
+    "title_line1": "Fotometria de corbes de llum,",
+    "title_highlight": "mesurada",
+    "title_rest": "amb precisió",
+    "sub": "Starflux és una aplicació d'escriptori nativa per a fotometria d'obertura diferencial sobre sèries d'imatges FITS: trànsits d'exoplanetes, estrelles variables, ocultacions d'asteroides i altra ciència de corbes de llum. Successor espiritual de FotoDif.",
+    "cta_primary": "Descarrega Starflux",
+    "cta_secondary": "Veure el codi font",
+    "readout_title": "corba_de_llum_diferencial.fits",
+    "readout_target": "Objectiu",
+    "readout_filter": "Filtre",
+    "readout_points": "Punts",
+    "readout_rms": "RMS"
+  },
+  "features": {
+    "kicker": "Instrumentació",
+    "title": "Pensada per a la sessió d'observació",
+    "sub": "Un flux de treball complet des dels fotogrames FITS en brut fins a una corba de llum publicable.",
+    "items": [
+      { "title": "Sèries d'imatges FITS", "body": "Carrega un sol fitxer, diversos fitxers, o una carpeta sencera d'una sessió d'observació." },
+      { "title": "Fotometria d'obertura", "body": "Centroide de sub-píxel, suma d'obertura i substracció de fons mitjançant anell de cel amb sigma-clipping." },
+      { "title": "Corbes de llum diferencials", "body": "Estrelles objectiu, comparació i control — amb nom i il·limitades, no fixades a tres." },
+      { "title": "Sessions represes", "body": "Desa i recupera posicions d'estrelles i resultats processats — reprèn una sessió interrompuda exactament on la vas deixar." },
+      { "title": "Mode observador", "body": "Un tema de llum vermella que preserva la visió nocturna al telescopi, activable en directe sense reiniciar." },
+      { "title": "Exportació AAVSO", "body": "Exporta resultats en el format AAVSO Extended File Format, llestos per enviar." }
+    ]
+  },
+  "pipeline": {
+    "kicker": "Mètode",
+    "title": "El pipeline de mesura",
+    "sub": "Tres passos per a cada estrella seleccionada, de comptes en brut a una magnitud diferencial.",
+    "steps": [
+      { "title": "Centroide", "body": "Refina una posició de píxel aproximada a un centre de massa de sub-píxel, ponderat per la intensitat ADU." },
+      { "title": "Suma d'obertura", "body": "Suma els ADU dins del radi r_ap del centroide, amb ponderació de vora a nivell de sub-píxel." },
+      { "title": "Substracció de cel", "body": "Resta el fons de l'anell de cel amb sigma-clipping per obtenir el flux net." }
+    ]
+  },
+  "download": {
+    "status": "Pre-alpha — encara no hi ha cap versió publicada",
+    "title": "Descarrega Starflux",
+    "sub": "Aconsegueix la {latest_release} quan surti l'alpha. Els binaris encara no estan signats: macOS Gatekeeper i Windows SmartScreen avisaran en el primer inici.",
+    "latest_release_label": "darrera versió",
+    "note": "macOS: fes clic dret a l'app dins el .dmg muntat i tria \"Obre\" en lloc de doble clic (o executa {cmd} des de Terminal). Windows: fes clic a \"Més informació\" → \"Executa igualment\" a l'avís de SmartScreen.",
+    "all_releases": "Totes les versions beta →"
+  },
+  "roadmap": {
+    "title": "Full de ruta",
+    "sub": "Alpha prevista per al desembre de 2026, Beta el 2027. Encara no hi ha data fixada per a v1.0.0.",
+    "items": [
+      { "status": "done", "body": "Pipeline de mesura principal: carregar FITS → marcar estrelles → fotometria d'obertura → corba de llum diferencial → desar/exportar." },
+      { "status": "done", "body": "Estrelles amb nom/múltiples, sessions represes, control de tolerància d'error, metadades de capçalera al selector d'estrelles." },
+      { "status": "done", "body": "UI de configuració, gràfic de deriva de seguiment d'estrelles, correcció d'inclinació, exportació AAVSO, detecció automàtica d'estrelles." },
+      { "status": "done", "body": "Processament per carpeta vigilada, cerca de variables a tot el camp, anàlisi de període Lomb-Scargle." },
+      { "status": "next", "body": "Validació creuada dels resultats fotomètrics contra FotoDif, i després la primera versió alpha etiquetada." }
+    ],
+    "status_done": "fet",
+    "status_next": "següent",
+    "footer": "Consulta el {changelog} per veure què es va publicar a cada versió, i la {readme} al README.",
+    "changelog_label": "changelog",
+    "readme_label": "taula completa de funcionalitats"
+  },
+  "fikua": {
+    "body": "Starflux és un projecte de codi obert coordinat per {fikua}."
+  },
+  "footer": {
+    "license": "Llicència Apache 2.0"
+  }
+}

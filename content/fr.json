@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Starflux — Photométrie de courbes de lumière, sur votre bureau",
+    "description": "Starflux est une application de bureau native et open source pour la photométrie d'ouverture différentielle sur des séries d'images FITS — transits d'exoplanètes, étoiles variables, occultations d'astéroïdes. Gratuite pour macOS, Windows et Linux."
+  },
+  "nav": {
+    "features": "Instrumentation",
+    "roadmap": "Feuille de route",
+    "download": "Télécharger"
+  },
+  "hero": {
+    "eyebrow": "Open source · Go · Alpha prévue pour décembre 2026",
+    "title_line1": "Photométrie de courbes de lumière,",
+    "title_highlight": "mesurée",
+    "title_rest": "avec précision",
+    "sub": "Starflux est une application de bureau native pour la photométrie d'ouverture différentielle sur des séries d'images FITS : transits d'exoplanètes, étoiles variables, occultations d'astéroïdes et autres travaux sur les courbes de lumière. Successeur spirituel de FotoDif.",
+    "cta_primary": "Télécharger Starflux",
+    "cta_secondary": "Voir le code source",
+    "readout_title": "courbe_lumiere_differentielle.fits",
+    "readout_target": "Cible",
+    "readout_filter": "Filtre",
+    "readout_points": "Points",
+    "readout_rms": "RMS"
+  },
+  "features": {
+    "kicker": "Instrumentation",
+    "title": "Conçu pour la session d'observation",
+    "sub": "Un flux de travail complet, des trames FITS brutes jusqu'à une courbe de lumière publiable.",
+    "items": [
+      { "title": "Séries d'images FITS", "body": "Chargez un seul fichier, plusieurs fichiers, ou un dossier entier d'une session d'observation." },
+      { "title": "Photométrie d'ouverture", "body": "Centroïde au sous-pixel près, somme d'ouverture et soustraction du fond de ciel par anneau avec sigma-clipping." },
+      { "title": "Courbes de lumière différentielles", "body": "Étoiles cible, comparaison et contrôle — nommées et illimitées, pas fixées à trois." },
+      { "title": "Sessions reprises", "body": "Enregistrez et restaurez les positions d'étoiles et les résultats traités — reprenez une session interrompue exactement là où vous l'avez laissée." },
+      { "title": "Mode observateur", "body": "Un thème en lumière rouge qui préserve la vision nocturne au télescope, activable en direct sans redémarrage." },
+      { "title": "Export AAVSO", "body": "Exportez les résultats au format AAVSO Extended File Format, prêts à être soumis." }
+    ]
+  },
+  "pipeline": {
+    "kicker": "Méthode",
+    "title": "Le pipeline de mesure",
+    "sub": "Trois étapes par étoile sélectionnée, des comptes bruts à une magnitude différentielle.",
+    "steps": [
+      { "title": "Centroïde", "body": "Affine une position de pixel approximative vers un centre de masse au sous-pixel près, pondéré par l'intensité ADU." },
+      { "title": "Somme d'ouverture", "body": "Somme les ADU dans le rayon r_ap du centroïde, avec pondération des bords au sous-pixel." },
+      { "title": "Soustraction du ciel", "body": "Soustrait le fond de l'anneau de ciel avec sigma-clipping pour obtenir le flux net." }
+    ]
+  },
+  "download": {
+    "status": "Pré-alpha — aucune version publiée pour l'instant",
+    "title": "Télécharger Starflux",
+    "sub": "Récupérez la {latest_release} dès que l'alpha sera publiée. Les binaires ne sont pas encore signés : macOS Gatekeeper et Windows SmartScreen afficheront un avertissement au premier lancement.",
+    "latest_release_label": "dernière version",
+    "note": "macOS : faites un clic droit sur l'application dans le .dmg monté et choisissez « Ouvrir » plutôt qu'un double-clic (ou exécutez {cmd} depuis le Terminal). Windows : cliquez sur « Plus d'infos » → « Exécuter quand même » dans l'avertissement SmartScreen.",
+    "all_releases": "Toutes les versions bêta →"
+  },
+  "roadmap": {
+    "title": "Feuille de route",
+    "sub": "Alpha prévue pour décembre 2026, Bêta en 2027. Aucune date fixée pour la v1.0.0.",
+    "items": [
+      { "status": "done", "body": "Pipeline de mesure principal : charger les FITS → marquer les étoiles → photométrie d'ouverture → courbe de lumière différentielle → enregistrer/exporter." },
+      { "status": "done", "body": "Étoiles nommées/multiples, sessions reprises, contrôle de tolérance d'erreur, métadonnées d'en-tête dans le sélecteur d'étoiles." },
+      { "status": "done", "body": "Interface de configuration, graphique de dérive de suivi des étoiles, correction d'inclinaison, export AAVSO, détection automatique des étoiles." },
+      { "status": "done", "body": "Traitement par dossier surveillé, recherche de variables sur tout le champ, analyse de période Lomb-Scargle." },
+      { "status": "next", "body": "Validation croisée des résultats photométriques par rapport à FotoDif, puis la première version alpha étiquetée." }
+    ],
+    "status_done": "fait",
+    "status_next": "suivant",
+    "footer": "Consultez le {changelog} pour voir ce qui a été livré à chaque version, et le {readme} dans le README.",
+    "changelog_label": "changelog",
+    "readme_label": "tableau complet des fonctionnalités"
+  },
+  "fikua": {
+    "body": "Starflux est un projet open source coordonné par {fikua}."
+  },
+  "footer": {
+    "license": "Sous licence Apache 2.0"
+  }
+}

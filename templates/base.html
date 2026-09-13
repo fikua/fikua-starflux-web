@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="description" content="{{page_description}}">
+    <meta name="theme-color" content="#05070d">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="canonical" href="{{page_url}}">
+    {{hreflang_links}}
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{page_title}}">
+    <meta property="og:description" content="{{page_description}}">
+    <meta property="og:url" content="{{page_url}}">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <script type="application/ld+json">{{software_jsonld}}</script>
+</head>
+<body>
+    <div class="starfield" aria-hidden="true"></div>
+    <div class="gridfield" aria-hidden="true"></div>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/{{lang}}/" class="nav-brand">
+                <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="Starflux">
+                    <circle cx="32" cy="32" r="30" fill="#0d1220"/>
+                    <circle cx="32" cy="32" r="22" stroke="#2a3760" stroke-width="1"/>
+                    <path d="M12 40 L22 33 L30 37 L40 20 L48 25 L56 13" stroke="#ff6a3d" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <circle cx="40" cy="20" r="3.2" fill="#ff6a3d"/>
+                </svg>
+                Starflux
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="hide-mobile">{{nav_features}}</a>
+                <a href="#roadmap" class="hide-mobile">{{nav_roadmap}}</a>
+                <a href="https://github.com/fikua/fikua-starflux" target="_blank" rel="noopener">GitHub</a>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false">{{lang_current}} ▾</button>
+                    <div class="lang-dropdown">{{lang_switcher}}</div>
+                </div>
+                <a href="#download" class="btn-download-nav">{{nav_download}}</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{content}}
+    </main>
+
+    <div class="fikua-strip">
+        <div class="fikua-strip-inner">
+            <svg viewBox="0 0 500 500" fill="none" aria-hidden="true">
+                <line x1="250.00" y1="220.00" x2="250.00" y2="35.00" stroke="#E1241A" stroke-width="52" stroke-linecap="round"/>
+                <line x1="275.98" y1="235.00" x2="436.20" y2="142.50" stroke="#F6C915" stroke-width="52" stroke-linecap="round"/>
+                <line x1="275.98" y1="265.00" x2="436.20" y2="357.50" stroke="#1A1A1A" stroke-width="52" stroke-linecap="round"/>
+                <line x1="250.00" y1="280.00" x2="250.00" y2="465.00" stroke="#1A4C9C" stroke-width="52" stroke-linecap="round"/>
+                <line x1="224.02" y1="265.00" x2="63.80" y2="357.50" stroke="#F6C915" stroke-width="52" stroke-linecap="round"/>
+                <line x1="224.02" y1="235.00" x2="63.80" y2="142.50" stroke="#1A1A1A" stroke-width="52" stroke-linecap="round"/>
+            </svg>
+            <p>{{fikua_body}}</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>{{footer_license}}</span>
+            <div class="footer-links">
+                <a href="https://github.com/fikua/fikua-starflux" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/fikua/fikua-starflux/issues" target="_blank" rel="noopener">Issues</a>
+                <a href="https://github.com/fikua/fikua-starflux/discussions" target="_blank" rel="noopener">Discussions</a>
+                <a href="https://fikua.com" target="_blank" rel="noopener">fikua.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

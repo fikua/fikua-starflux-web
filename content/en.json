@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Starflux — Light curve photometry, on your desktop",
+    "description": "Starflux is an open-source native desktop app for differential aperture photometry on FITS image series — exoplanet transits, variable stars, asteroid occultations. Free for macOS, Windows, and Linux."
+  },
+  "nav": {
+    "features": "Instrumentation",
+    "roadmap": "Roadmap",
+    "download": "Download"
+  },
+  "hero": {
+    "eyebrow": "Open source · Go · Alpha targeted December 2026",
+    "title_line1": "Light curve photometry,",
+    "title_highlight": "measured",
+    "title_rest": "precisely",
+    "sub": "Starflux is a native desktop app for differential aperture photometry on FITS image series — exoplanet transits, variable stars, asteroid occultations, and other light-curve science. Spiritual successor to FotoDif.",
+    "cta_primary": "Download Starflux",
+    "cta_secondary": "View source",
+    "readout_title": "differential_lightcurve.fits",
+    "readout_target": "Target",
+    "readout_filter": "Filter",
+    "readout_points": "Points",
+    "readout_rms": "RMS"
+  },
+  "features": {
+    "kicker": "Instrumentation",
+    "title": "Built for the observing session",
+    "sub": "A complete workflow from raw FITS frames to a publishable light curve.",
+    "items": [
+      { "title": "FITS image series", "body": "Load a single file, multiple files, or an entire folder of an observing run." },
+      { "title": "Aperture photometry", "body": "Sub-pixel centroiding, aperture sum, and sigma-clipped sky annulus background subtraction." },
+      { "title": "Differential light curves", "body": "Target, comparison, and check stars — named and unlimited, not fixed to three." },
+      { "title": "Resumable sessions", "body": "Save and restore star positions and processed results — pick up an interrupted run exactly where it left off." },
+      { "title": "Observer mode", "body": "A red-light theme that preserves night vision at the telescope, toggled live with no restart." },
+      { "title": "AAVSO export", "body": "Export results in the AAVSO Extended File Format, ready to submit." }
+    ]
+  },
+  "pipeline": {
+    "kicker": "Method",
+    "title": "The measurement pipeline",
+    "sub": "Three steps per selected star, from raw counts to a differential magnitude.",
+    "steps": [
+      { "title": "Centroid", "body": "Refine an approximate pixel position to a sub-pixel center of mass, weighted by ADU intensity." },
+      { "title": "Aperture sum", "body": "Sum ADUs within radius r_ap of the centroid, with sub-pixel edge weighting." },
+      { "title": "Sky subtraction", "body": "Subtract the sigma-clipped sky annulus background to get net flux." }
+    ]
+  },
+  "download": {
+    "status": "Pre-alpha — no release published yet",
+    "title": "Download Starflux",
+    "sub": "Grab the {latest_release} once the alpha ships. Binaries are not code-signed yet: macOS Gatekeeper and Windows SmartScreen will warn on first launch.",
+    "latest_release_label": "latest release",
+    "note": "macOS: right-click the app inside the mounted .dmg and choose \"Open\" instead of double-clicking (or run {cmd} from Terminal). Windows: click \"More info\" → \"Run anyway\" on the SmartScreen prompt.",
+    "all_releases": "All beta releases →"
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "sub": "Alpha targeted for December 2026, Beta in 2027. No v1.0.0 date is set yet.",
+    "items": [
+      { "status": "done", "body": "Core measurement pipeline: load FITS → mark stars → aperture photometry → differential light curve → save/export." },
+      { "status": "done", "body": "Named/multiple stars, resumable sessions, error tolerance control, header metadata in the star picker." },
+      { "status": "done", "body": "Configuration UI, star-tracking drift plot, tilt correction, AAVSO export, automatic star detection." },
+      { "status": "done", "body": "Watch-folder processing, field-wide variable search, Lomb-Scargle period analysis." },
+      { "status": "next", "body": "Cross-validation of photometry results against FotoDif, then the first tagged alpha release." }
+    ],
+    "status_done": "done",
+    "status_next": "next",
+    "footer": "See the {changelog} for what shipped in each version, and the {readme} in the README.",
+    "changelog_label": "changelog",
+    "readme_label": "full feature table"
+  },
+  "fikua": {
+    "body": "Starflux is an open-source project coordinated by {fikua}."
+  },
+  "footer": {
+    "license": "Apache 2.0 licensed"
+  }
+}

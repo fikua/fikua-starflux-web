@@ -19,5 +19,8 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Build
+        run: node build.js
+
       - name: Validate HTML
-        run: npx --yes html-validate public/*.html
+        run: npx --yes html-validate dist/**/*.html public/*.html

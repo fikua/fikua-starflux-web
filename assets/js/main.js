@@ -8,4 +8,12 @@
             }
         });
     });
+
+    const langBtn = document.querySelector('.lang-btn');
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            const expanded = langBtn.getAttribute('aria-expanded') === 'true';
+            langBtn.setAttribute('aria-expanded', String(!expanded));
+        });
+    }
 })();
