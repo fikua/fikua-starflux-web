@@ -8,11 +8,11 @@
   --text: #b9c3e0;
   --text-muted: #6b769c;
   --heading: #eef1ff;
-  --accent: #ff6a3d;
-  --accent-soft: rgba(255, 106, 61, 0.12);
-  --accent-2: #4fd1c5;
-  --accent-2-soft: rgba(79, 209, 197, 0.12);
-  --grid-line: rgba(79, 209, 197, 0.07);
+  --accent: #7dd3fc;
+  --accent-soft: rgba(125, 211, 252, 0.12);
+  --accent-2: #38bdf8;
+  --accent-2-soft: rgba(56, 189, 248, 0.12);
+  --grid-line: rgba(56, 189, 248, 0.07);
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
@@ -42,7 +42,7 @@ a { color: var(--accent-2); }
     radial-gradient(1.5px 1.5px at 38% 24%, #4fd1c5, transparent),
     radial-gradient(1px 1px at 54% 82%, #ffffff, transparent),
     radial-gradient(1px 1px at 68% 14%, #ffffff, transparent),
-    radial-gradient(1.5px 1.5px at 78% 58%, #ff6a3d, transparent),
+    radial-gradient(1.5px 1.5px at 78% 58%, #7dd3fc, transparent),
     radial-gradient(1px 1px at 88% 32%, #ffffff, transparent),
     radial-gradient(1px 1px at 96% 78%, #ffffff, transparent),
     radial-gradient(1px 1px at 14% 92%, #ffffff, transparent),
@@ -150,7 +150,7 @@ a { color: var(--accent-2); }
 
 .btn-download-nav {
   background: var(--accent);
-  color: #1a0a03 !important;
+  color: #04121c !important;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
@@ -228,7 +228,7 @@ a { color: var(--accent-2); }
 
 .btn:hover { transform: translateY(-1px); }
 
-.btn-primary { background: var(--accent); color: #1a0a03; }
+.btn-primary { background: var(--accent); color: #04121c; }
 .btn-primary:hover { opacity: 0.92; }
 
 .btn-secondary {
